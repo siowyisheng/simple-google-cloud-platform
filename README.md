@@ -8,9 +8,42 @@ _Google Cloud Platform concepts explained simply._
 
 - [What is Google Cloud Platform?](#what-is-google-cloud-platform)
 - [What does Google Cloud Platform look like?](#what-does-google-cloud-platform-look-like)
+- [TODO](#todo)
+- [running a cloud sql instance is expensive](#running-a-cloud-sql-instance-is-expensive)
 
 ## What is Google Cloud Platform?
 
-Google Cloud Platform is a server-side app used to execute queries. Google Cloud Platform is also the name of the query language that the queries must be written in.
-
 ## What does Google Cloud Platform look like?
+
+## TODO
+
+projects
+app engine
+cloud sql instances
+apis
+setting up
+cloud sql proxy
+gcloud init
+the different SDKs
+standard environment vs flexible environment
+connection
+settings.py
+
+## running a cloud sql instance is expensive
+
+```bash
+$ gcloud sql instances create YOUR_INSTANCE_NAME --region=asia-southeast1
+```
+
+create user
+create database
+
+```bash
+$ gcloud sql instances describe YOUR_INSTANCE_NAME
+```
+
+look for connectionName
+
+```bash
+$ ./cloud_sql_proxy -instances="[YOUR_INSTANCE_CONNECTION_NAME]"=tcp:3306
+```
